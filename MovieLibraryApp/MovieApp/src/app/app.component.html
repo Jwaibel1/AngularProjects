@@ -1,10 +1,12 @@
 <div class="container">
-  <app-navigation></app-navigation>
+  <app-navigation (currentPage)="onNavigatePage($event)"></app-navigation>
   <div class="row">
     <div class="col-md-10 mx-auto">
-      <app-saved-movies></app-saved-movies>
+      <app-saved-movies
+        *ngIf="pageDisplayed === 'saved-movies'"
+      ></app-saved-movies>
       <hr />
-      <app-library></app-library>
+      <app-library *ngIf="pageDisplayed === 'library'"></app-library>
     </div>
   </div>
 </div>

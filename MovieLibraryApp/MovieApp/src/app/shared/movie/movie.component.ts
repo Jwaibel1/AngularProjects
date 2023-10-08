@@ -1,10 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Movie } from './movie.model';
 
 @Component({
   selector: 'app-movie',
   templateUrl: './movie.component.html',
-  styleUrls: ['./movie.component.css']
+  styleUrls: ['./movie.component.css'],
 })
 export class MovieComponent {
+  @Input() movie: Movie;
+  @Output() movieSelected = new EventEmitter<void>();
 
+  onMovieSelected() {
+    this.movieSelected.emit();
+  }
 }

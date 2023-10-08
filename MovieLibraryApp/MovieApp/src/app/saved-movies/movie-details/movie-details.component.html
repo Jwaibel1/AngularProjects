@@ -1,36 +1,41 @@
 <div class="row">
   <div class="col-md-12">
-    <h2>Movie Title</h2>
+    <h2>{{ movie.title }}</h2>
   </div>
 </div>
 
 <div class="row">
   <div class="col-md-12">
-    <img src="" alt="" class="img-responsive" />
+    <img
+      src="{{ movie.coverImagePath }}"
+      alt="{{ movie.title }}"
+      class="img-responsive"
+      style="max-height: 300px"
+    />
   </div>
 </div>
 
 <div class="row">
   <div class="col-md-12">
-    <h3>Genre</h3>
+    <h3>{{ movie.genre }}</h3>
   </div>
 </div>
 
 <div class="row">
   <div class="col-md-12">
-    <p>Age Rating</p>
+    <p>Rated: {{ movie.ageRating }}</p>
   </div>
 </div>
 
 <div class="row">
   <div class="col-md-12">
-    <p>Review Rating</p>
+    <p>Critics Review: {{ movie.reviewRating }}</p>
   </div>
 </div>
 
 <div class="row">
   <div class="col-md-12">
-    <p>Synopsis</p>
+    <p>{{ movie.synopsis }}</p>
   </div>
 </div>
 

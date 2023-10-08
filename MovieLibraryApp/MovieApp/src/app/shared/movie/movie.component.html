@@ -1,1 +1,14 @@
-<p>movie works!</p>
+<a href="#" class="list-group-item clearfix" (click)="onMovieSelected()">
+  <div class="float-left">
+    <h4 class="list-group-item-heading">{{ movie.title }}</h4>
+    <p class="list-group-item-text mb-0">{{ movie.genre }}</p>
+  </div>
+  <div class="float-right">
+    <img
+      src="{{ movie.coverImagePath }}"
+      alt="{{ movie.title }}"
+      class="img-responsive rounded"
+      style="max-height: 80px"
+    />
+  </div>
+</a>
