@@ -1,15 +1,18 @@
 <div class="row mb-3">
-  <div class="col-md-12">
-    <app-movie
-      *ngFor="let movieElement of myMovies"
-      [movie]="movieElement"
-      (movieSelected)="handleMovieSelected(movieElement)"
-    ></app-movie>
+  <div class="col-md-12" *ngFor="let movieElement of myMovies; let i = index">
+    <app-movie [movie]="movieElement" [id]="i"></app-movie>
+    <button
+      class="float-right"
+      style="border: none; font-size: 16px"
+      (click)="onRemoveMovie(i)"
+    >
+      &minus;
+    </button>
   </div>
 </div>
 <hr />
 <div class="row">
   <div class="col-md-12">
-    <button class="btn btn-primary">Add Movie</button>
+    <button class="btn btn-primary" (click)="onNewMovie()">Add Movie</button>
   </div>
 </div>

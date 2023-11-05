@@ -1,18 +1,12 @@
-<div class="row mb-3" *ngFor="let movie of allMovies">
-  <div class="col-md-12">
-    <a href="#" class="list-group-item clearfix">
-      <div class="float-left">
-        <h4 class="list-group-item-heading">{{ movie.title }}</h4>
-        <p class="list-group-item-text mb-0">{{ movie.genre }}</p>
-      </div>
-      <div class="float-right">
-        <img
-          src="{{ movie.coverImagePath }}"
-          alt="{{ movie.title }}"
-          class="img-responsive rounded"
-          style="max-height: 80px"
-        />
-      </div>
-    </a>
+<div class="row mb-3">
+  <div class="col-md-10" *ngFor="let movieElement of allMovies">
+    <app-movie [movie]="movieElement"></app-movie>
+    <button
+      class="float-right"
+      style="border: none; font-size: 16px"
+      (click)="onSaveMovie(movieElement)"
+    >
+      &plus;
+    </button>
   </div>
 </div>

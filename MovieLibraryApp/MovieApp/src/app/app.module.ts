@@ -10,6 +10,11 @@ import { MovieResultsComponent } from './library/movie-results/movie-results.com
 import { MovieSearchComponent } from './library/movie-search/movie-search.component';
 import { NavigationComponent } from './shared/navigation/navigation.component';
 import { MovieComponent } from './shared/movie/movie.component';
+import { DropdownDirective } from './shared/directives/dropdown.directive';
+import { AppRoutingModule } from './app-routing.module';
+import { SavedMovieHomeComponent } from './saved-movies/saved-movie-home/saved-movie-home.component';
+import { MovieEditorComponent } from './saved-movies/movie-editor/movie-editor.component';
+import { NotificationComponent } from './shared/notification/notification.component';
 
 @NgModule({
   declarations: [
@@ -21,12 +26,14 @@ import { MovieComponent } from './shared/movie/movie.component';
     MovieResultsComponent,
     MovieSearchComponent,
     NavigationComponent,
-    MovieComponent
+    MovieComponent,
+    DropdownDirective,
+    SavedMovieHomeComponent,
+    MovieEditorComponent,
+    NotificationComponent,
   ],
-  imports: [
-    BrowserModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

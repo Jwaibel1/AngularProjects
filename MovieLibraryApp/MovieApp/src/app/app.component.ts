@@ -7,9 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'MovieApp';
-  pageDisplayed = 'saved-movies';
-
-  onNavigatePage(page: string) {
-    this.pageDisplayed = page;
-  }
 }

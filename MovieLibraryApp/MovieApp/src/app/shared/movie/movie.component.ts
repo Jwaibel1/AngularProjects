@@ -1,5 +1,6 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 import { Movie } from './movie.model';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-movie',
@@ -8,9 +9,8 @@ import { Movie } from './movie.model';
 })
 export class MovieComponent {
   @Input() movie: Movie;
-  @Output() movieSelected = new EventEmitter<void>();
+  @Input() id: number;
+  @Output() movieSelected = new Subject<void>();
 
-  onMovieSelected() {
-    this.movieSelected.emit();
-  }
+  constructor() {}
 }
