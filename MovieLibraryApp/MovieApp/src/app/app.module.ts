@@ -15,6 +15,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { SavedMovieHomeComponent } from './saved-movies/saved-movie-home/saved-movie-home.component';
 import { MovieEditorComponent } from './saved-movies/movie-editor/movie-editor.component';
 import { NotificationComponent } from './shared/notification/notification.component';
+import { MovieFormTdComponent } from './saved-movies/movie-form-td/movie-form-td.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { NotificationComponent } from './shared/notification/notification.compon
     SavedMovieHomeComponent,
     MovieEditorComponent,
     NotificationComponent,
+    MovieFormTdComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

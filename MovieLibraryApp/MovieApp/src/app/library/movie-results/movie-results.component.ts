@@ -13,7 +13,7 @@ export class MovieResultsComponent implements OnInit {
   allMovies: Movie[] = [];
 
   constructor(
-    private savedMovieservice: SavedMovieService,
+    private savedMovieService: SavedMovieService,
     private libraryService: LibraryService
   ) {}
 
@@ -22,6 +22,6 @@ export class MovieResultsComponent implements OnInit {
   }
 
   onSaveMovie(movie: Movie) {
-    return this.savedMovieservice.saveMovie(movie);
+    return this.savedMovieService.saveMovie(movie);
   }
 }

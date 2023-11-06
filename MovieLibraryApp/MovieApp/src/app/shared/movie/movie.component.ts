@@ -10,7 +10,7 @@ import { Subject } from 'rxjs';
 export class MovieComponent {
   @Input() movie: Movie;
   @Input() id: number;
-  @Output() movieSelected = new Subject<void>();
+  @Output() movieSelected = new Subject<Movie>();
 
   constructor() {}
 }

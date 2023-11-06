@@ -1,11 +1,12 @@
-import { EventEmitter, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Movie } from '../shared/movie/movie.model';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class LibraryService {
-  movieListChanged = new EventEmitter<Movie[]>();
+  movieListChanged = new Subject<Movie[]>();
 
   private allMovies: Movie[] = [
     new Movie(

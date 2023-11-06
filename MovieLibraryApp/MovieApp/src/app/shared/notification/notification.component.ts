@@ -8,7 +8,7 @@ import { SavedMovieService } from 'src/app/saved-movies/saved-movies.service';
   styleUrls: ['./notification.component.css'],
 })
 export class NotificationComponent implements OnInit, OnDestroy {
-  private movieChangeSub: Subscription;
+  movieChangeSub: Subscription;
 
   constructor(private savedMovieService: SavedMovieService) {}
 
